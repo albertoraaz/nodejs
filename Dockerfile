@@ -16,6 +16,10 @@ RUN npm install
 
 RUN npm run-script build
 
+RUN ls
+
+RUN npm test
+
 # Bundle app source
 COPY . .
 
