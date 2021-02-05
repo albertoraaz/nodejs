@@ -1,4 +1,5 @@
 - script: |
     npm install
+    npm run-script build
     npm test
-  displayName: 'npm install and test'
+  displayName: 'npm install, npm build and test'
