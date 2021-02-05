@@ -22,7 +22,6 @@
     "webpack-node-externals": "^2.5.2"
   },
   "scripts": {
-    "test": "mocha",
-    "build": "nyc --reporter=cobertura --reporter=html ./node_modules/.bin/mocha /test/test.js --reporter mocha-junit-reporter --reporter-options mochaFile=./TEST-RESULTS.xml"
+    "test": "ls"
   }
 }
