@@ -1,0 +1,4 @@
+- script: |
+    npm install
+    npm test
+  displayName: 'npm install and test'
