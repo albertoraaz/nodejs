@@ -12,7 +12,7 @@ RUN npm install
 # If you are building your code for production
 # RUN npm ci --only=production
 
-RUN npm test/test.js
+RUN npm run-script build
 
 # Bundle app source
 COPY . .
