@@ -6,18 +6,11 @@ variables:
  imageName: 'pipelines-javascript-docker'
 steps:
 - task: Docker@2
-  displayName: Build an image
+  displayName: Build and push an image to container registry
   inputs:
-    command: build
-    repository: $(imageRepository)
-    containerRegistry: $(dockerRegistryServiceConnection)
-    dockerfile: $(dockerfilePath)
-- task: Docker@2
-  displayName: Push image
-  inputs:
-    command: push
-    repository: $(imageRepository)
+    command: buildAndPush
+    repository: $(imageName)
+    dockerfile: Dockerfile
     containerRegistry: $(dockerRegistryServiceConnection)
     tags: |
-      test1
-      test2
+          $(tag)
