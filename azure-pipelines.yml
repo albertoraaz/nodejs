@@ -12,6 +12,6 @@ steps:
   displayName: Build an image
   inputs:
     command: buildAndPush
-    repository: demo.goharbor.io/nodejs
+    repository: nodejs:14.04
     containerRegistry: hubrepo3
     Dockerfile: Dockerfile
