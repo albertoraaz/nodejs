@@ -16,4 +16,5 @@ steps:
     command: build
     containerRegistry: hubrepo3
     Dockerfile: Dockerfile
+- script: docker tag nodejs demo.goharbor.io/nodejs/repository:14.04 
 - script: docker push demo.goharbor.io/nodejs/repository:14.04 
