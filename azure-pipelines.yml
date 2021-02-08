@@ -12,6 +12,6 @@ steps:
   displayName: Build an image
   inputs:
     command: buildAndPush
-    repository: nodejs:14.04
+    repository: nodejs
     containerRegistry: hubrepo3
     Dockerfile: Dockerfile
