@@ -13,7 +13,7 @@ steps:
 - task: Docker@2
   displayName: Build an image
   inputs:
-    command: buildAndPush
-    repository: 'https://demo.goharbor.io/nodejs/repository:14.04'
+    command: push 
+    repository: demo.goharbor.io/nodejs/repository:14.04
     containerRegistry: hubrepo3
     Dockerfile: Dockerfile
