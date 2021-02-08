@@ -7,5 +7,6 @@ steps:
   displayName: Build an image
   inputs:
     command: build
+    containerRegistry: hubrepo3
     Dockerfile: Dockerfile
     
