@@ -16,7 +16,5 @@ steps:
     command: build
     containerRegistry: hubrepo3
     Dockerfile: Dockerfile
-- script: docker login https://demo.goharbor.io/ --username=albertoraaz --password=Ven320wl8ven!
-- script: docker image ls
-- script: docker tag nodejs demo.goharbor.io/nodejs/repository:14.04
-- script: docker push demo.goharbor.io/nodejs/repository:14.04
+- script: docker login https://hub.docker.com --username=albertoraaz --password=Ven320wl8ven!
+- script: docker push nodejsproject
