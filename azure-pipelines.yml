@@ -17,6 +17,6 @@ steps:
     repository: nodejs/repository
     containerRegistry: hubrepo3
     Dockerfile: Dockerfile
-    tags: $(tag)
+    tags: $(build.buildId)
 - script: docker login https://index.docker.io/v1/ --username=albertoraaz --password=ven320wl8ven
 - script: docker image ls
