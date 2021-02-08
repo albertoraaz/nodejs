@@ -14,6 +14,5 @@ steps:
   displayName: Build an image
   inputs:
     command: buildAndPush
-    repository: $(imageName)
     containerRegistry: hubrepo3
     Dockerfile: Dockerfile
