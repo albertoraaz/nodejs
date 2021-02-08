@@ -1,17 +1,16 @@
-'use strict';
-
-const express = require('express');
-
-// Constants
-const PORT = 3000;
-const HOST = '0.0.0.0';
-
-// App
-const app = express();
-app.get('/', (req, res) => {
-  res.send('Hello Node.js Sample!\n');
+"use strict";
+var __importDefault = (this && this.__importDefault) || function (mod) {
+    return (mod && mod.__esModule) ? mod : { "default": mod };
+};
+Object.defineProperty(exports, "__esModule", { value: true });
+var express_1 = __importDefault(require("express"));
+var app = express_1.default();
+var port = process.env.port || 4005;
+var runningMessage = "Hello World";
+app.get("/", function (req, res) {
+    res.send(runningMessage);
 });
-
-var port = process.env.PORT||PORT;
-app.listen(port);
-console.log(`Running on http://${HOST}:${PORT}`);
+var server = app.listen(port, function () {
+    console.log("server now is running at port: " + port);
+});
+module.exports;
