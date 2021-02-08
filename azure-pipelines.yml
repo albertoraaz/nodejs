@@ -5,6 +5,7 @@ pool:
   variables:
   imageName: 'nodejs'
 steps:
+- script: echo "I can run inside the container (it starts by default)"
 - task: Docker@2
   displayName: Login to Harbor
   inputs:
@@ -14,6 +15,5 @@ steps:
   displayName: Build an image
   inputs:
     command: buildAndPush
-    repository: demo.goharbor.io/nodejs/repository:14.04
     containerRegistry: hubrepo3
     Dockerfile: Dockerfile
