@@ -13,9 +13,4 @@ steps:
     versionSpec: $(node_version)
 
 - script: 
-   npm install
-
-- task: Npm@0 
-
-- script: 
-   npm run-script build
+   ls
