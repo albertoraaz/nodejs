@@ -8,16 +8,16 @@ steps:
 - task: Docker@2
   displayName: Build an image
   inputs:
-   repository: $(imageName)
-   command: build
-   Dockerfile: Dockerfile
+    command: build
+    repository: $(imageRepository)
+    containerRegistry: $(dockerRegistryServiceConnection)
+    dockerfile: $(dockerfilePath)
 - task: Docker@2
   displayName: Push image
   inputs:
-    containerRegistry: |
-      $(dockerRegistryServiceConnection)
-    repository: $(imageRepository)
     command: push
+    repository: $(imageRepository)
+    containerRegistry: $(dockerRegistryServiceConnection)
     tags: |
       test1
       test2
