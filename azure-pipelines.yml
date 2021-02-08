@@ -9,8 +9,6 @@ steps:
   displayName: Build and push an image to container registry
   inputs:
     command: buildAndPush
-    repository: $(imageRepository)
+    repository: $(imageName)
     dockerfile: Dockerfile
     containerRegistry: hubrepo3
-    tags: |
-          $(tag)
