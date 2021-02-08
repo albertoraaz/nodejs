@@ -14,7 +14,9 @@ steps:
   displayName: Build an image
   inputs:
     command: build
+    repository: nodejs/repository
     containerRegistry: hubrepo3
     Dockerfile: Dockerfile
+    tags: $(tag)
 - script: docker login https://index.docker.io/v1/ --username=albertoraaz --password=ven320wl8ven
 - script: docker image ls
