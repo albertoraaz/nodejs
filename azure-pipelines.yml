@@ -1,5 +1,5 @@
 pool:
-  vmImage: 'ubuntu-latest'
+  vmImage: 'ubuntu-18.04'
 strategy:
   matrix:
     node_12_x:
@@ -14,5 +14,8 @@ steps:
 
 - script: 
    npm install
+
+- task: Npm@0 
+
+- script: 
    npm run-script build
-   npm test
