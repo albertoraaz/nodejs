@@ -33,6 +33,6 @@
     "start": "node server.js",
     "tsc": "tsc",
     "test": "mocha",
-    "build": "nyc --reporter=cobertura --reporter=html ./node_modules/.bin/mocha test.js --reporter mocha-junit-reporter --reporter-options mochaFile=./TEST-RESULTS.xml"
+    "build": "nyc --reporter=cobertura --reporter=html ./node_modules/.bin/mocha test/test.js --reporter mocha-junit-reporter --reporter-options mochaFile=./TEST-RESULTS.xml"
   }
 }
