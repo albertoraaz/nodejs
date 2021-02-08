@@ -15,7 +15,7 @@ steps:
   displayName: Push image
   inputs:
     containerRegistry: |
-      $(dockerHub)
+      https://demo.goharbor.io/nodejs/repository:14.04
     repository: $(imageName)
     command: push
     tags: |
