@@ -9,8 +9,9 @@ steps:
   displayName: Build and push an image to container registry
   inputs:
     command: buildAndPush
-    repository: $(imageName)
+    repository: $(imageRepository)
     dockerfile: Dockerfile
+    buildContext : $(Build.Repository.LocalPath)
     containerRegistry: $(dockerRegistryServiceConnection)
     tags: |
           $(tag)
