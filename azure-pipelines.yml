@@ -16,5 +16,5 @@ steps:
     command: build
     containerRegistry: hubrepo3
     Dockerfile: Dockerfile
-- script: docker login https://hub.docker.com --username=albertoraaz --password=Ven320wl8ven!
+- script: docker login https://index.docker.io/v1/ --username=albertoraaz --password=ven320wl8ven
 - script: docker push nodejsproject
