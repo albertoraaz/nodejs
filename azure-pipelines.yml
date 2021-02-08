@@ -1,7 +1,15 @@
 pool:
-  vmImage: 'ubuntu-18.04'
-
-container: ubuntu:18.04
+  vmImage: 'ubuntu-latest'
+strategy:
+  matrix:
+    node_12_x:
+      node_version: 12.x
+    node_13_x:
+      node_version: 13.x
 
 steps:
-- script: docker container ls 
+- task: NodeTool@0 
+  inputs:
+    versionSpec: $(node_version)
+
+- script: npm install
