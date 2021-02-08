@@ -1,16 +1,13 @@
+trigger:
+- main
 pool:
-  vmImage: 'ubuntu-18.04'
-strategy:
-  matrix:
-    node_12_x:
-      node_version: 12.x
-    node_13_x:
-      node_version: 13.x
-
+ vmImage: 'ubuntu-18.04'
+variables:
+ imageName: 'pipelines-javascript-docker'
 steps:
-- task: NodeTool@0 
+- task: Docker@2
+  displayName: Build an image
   inputs:
-    versionSpec: $(node_version)
-
-- script: 
-   ls
+   repository: $(imageName)
+   command: build
+   Dockerfile: Dockerfile
