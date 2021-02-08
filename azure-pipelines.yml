@@ -15,8 +15,8 @@ steps:
   displayName: Push image
   inputs:
     containerRegistry: |
-      hubrepo
-    repository: $(imageName)
+      $(dockerRegistryServiceConnection)
+    repository: $(imageRepository)
     command: push
     tags: |
       test1
