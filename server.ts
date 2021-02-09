@@ -4,7 +4,7 @@ const app = express();
 
 const port = process.env.port || 4005;
 
-let runningMessage = "Hello World";
+let runningMessage = "Testing NodeJS APP...";
 
 app.get("/", (req, res) => {
   res.send(runningMessage);
