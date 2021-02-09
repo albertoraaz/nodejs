@@ -14,6 +14,5 @@ steps:
     Dockerfile: Dockerfile
     tags: $(build.buildId)
 - task: Docker@2
-  displayName: Push Image
 - script: docker login demo.goharbor.io/ --username=albertoraaz --password=Ven320wl8ven!
 - script: docker push demo.goharbor.io/nodejs/repository:$(build.buildId) 
